@@ -1,0 +1,210 @@
+<!DOCTYPE>
+<html>
+	<head>
+		<title>Nadine's CS Project</title>
+		<script src = "http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+		<script src = "http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js" type = "text/javascript"></script>
+		<script src = 'https://code.jquery.com/jquery-2.1.4.js'></script>
+		<link href="https://fonts.googleapis.com/css?family=Arvo" rel="stylesheet">
+	</head>
+	<body>
+		
+		<center><marquee><h1 style = "color: pink;">Welcome to my CS final project...</h1></marquee></center>
+		<a href="https://docs.google.com/document/d/1RPdHty2CSMBWsHjnIiWSNq4EqYAT3u76NYKso5CO5eg/edit?usp=sharing" style = "color: orange;">UML Diagram</a>
+		<h2 id = "interfaceButton" style = "color: purple;">Animal Interface...</h2>
+		<img src = "Interface.png" class = "Animal">
+		<h2 id = "mammalButton" style = "color: purple;">Mammal Superclass (implements Animal)...</h2>
+		<div class = "Mammal">
+			<img src = "Mammal.png">
+		</div>
+		<h3 id = "subclassButton" style = "color: blue; margin-left: 5%">Dog and Bat Subclasses (extends Mammal)...</h3>
+		<div class = "Subclass">
+			<img src = "Dog.png">
+			<img src = "Bat.png">
+		</div>
+		<h2 id = "birdButton" style = "color: purple;">Bird class (implements Animal)...</h2>
+		<div class = "Bird">
+			<img src = "Bird1.png">
+			<img src = "Bird2.png">
+		</div>
+		<h2 id = "reptileButton" style = "color: purple;">Reptile class (implements Animal)...</h2>
+	 	<div class = "Reptile">
+	 		<img src = "Reptile1.png">
+	 		<img src = "Reptile2.png">
+	 		<img src = "Reptile3.png">
+	 		<img src = "Reptile4.png">
+	 		<img src = "Reptile5.png">
+	 	</div>
+	 	<h3 id = "censusButton" style = "color: blue; margin-left: 5%">Census class (Reptile has-a Census)...</h3>
+	 	<div class = "Census">
+	 		<img src = "Census1.png">
+	 		<img src = "Census2.png">
+	 	</div>
+	 	<h2 id = "driverButton" style = "color: purple;">Driver classes...</h2>
+	 	<div class = "Driver">
+	 		<img src = "ReptileDriver1.png">
+	 		<img src = "ReptileDriver2.png">
+	 		<img src = "CensusDriver.png">
+	 		<img src = "NewDriver.png">
+	 	</div>
+	 	<h2 id = "implementationButton" style = "color: purple;">User implementation...</h2>
+	 	<div class = "Implementation">
+	 		<img src = "ReptileDriverImplementation1.png">
+	 		<img src = "ReptileDriverImplementation2.png">
+	 		<img src = "ReptileDriverImplementation3.png">
+	 	</div>	
+	</body>
+	<style>
+		body 
+		{
+			font-family: 'Arvo', serif;
+		}
+		.Reptile
+		{
+			display: none;
+		}
+		.Animal
+		{
+			display: none;
+		}
+		.Mammal
+		{
+			display: none;
+		}
+		.Bird
+		{
+			display: none;
+		}
+		.Subclass
+		{
+			display: none;
+		}
+		.Census
+		{
+			display: none;
+		}
+		.Driver
+		{
+			display: none;
+		}
+		.Implementation
+		{
+			display: none;
+		}
+	</style>
+	<script>
+		$(document).ready(function()
+		{
+			$("#interfaceButton").click(function()
+			{
+				$("div.Subclass").hide();
+				$("div.Census").hide();
+				$("div.Driver").hide();
+				$("div.Reptile").hide();
+				$("div.Bird").hide();
+				$("div.Mammal").hide();
+				$("div.Implementation").hide();
+				$(".Animal").toggle();
+			});
+		});
+		$(document).ready(function()
+		{
+			$("#mammalButton").click(function()
+			{
+				$("div.Subclass").hide();
+				$("div.Census").hide();
+				$("div.Driver").hide();
+				$("div.Reptile").hide();
+				$("div.Bird").hide();
+				$("div.Implementation").hide();
+				$(".Animal").hide();
+				$("div.Mammal").toggle();
+			});
+		});
+
+		$(document).ready(function()
+		{
+			$("#birdButton").click(function()
+			{
+				$("div.Subclass").hide();
+				$("div.Census").hide();
+				$("div.Driver").hide();
+				$("div.Reptile").hide();
+				$(".Animal").hide();
+				$("div.Implementation").hide();
+				$("div.Mammal").hide();
+				$("div.Bird").toggle();
+			});
+		});
+		$(document).ready(function()
+		{
+			$("#reptileButton").click(function()
+			{
+				$("div.Subclass").hide();
+				$("div.Census").hide();
+				$("div.Driver").hide();
+				$(".Animal").hide();
+				$("div.Mammal").hide();
+				$("div.Bird").hide();
+				$("div.Implementation").hide();
+				$("div.Reptile").toggle();
+			});
+		});
+		$(document).ready(function()
+		{
+			$("#subclassButton").click(function()
+			{
+				$("div.Census").hide();
+				$("div.Driver").hide();
+				$("div.Reptile").hide();
+				$(".Animal").hide();
+				$("div.Mammal").hide();
+				$("div.Bird").hide();
+				$("div.Implementation").hide();
+				$("div.Subclass").toggle();
+			});
+		});
+		$(document).ready(function()
+		{
+			$("#censusButton").click(function()
+			{
+				$("div.Subclass").hide();
+				$("div.Driver").hide();
+				$("div.Reptile").hide();
+				$(".Animal").hide();
+				$("div.Mammal").hide();
+				$("div.Bird").hide();
+				$("div.Implementation").hide();
+				$("div.Census").toggle();
+			});
+		});
+		$(document).ready(function()
+		{
+			$("#driverButton").click(function()
+			{
+				$("div.Subclass").hide();
+				$("div.Census").hide();
+				$("div.Reptile").hide();
+				$(".Animal").hide();
+				$("div.Mammal").hide();
+				$("div.Bird").hide();
+				$("div.Implementation").hide();
+				$("div.Driver").toggle();
+			});
+		});
+		$(document).ready(function()
+		{
+			$("#implementationButton").click(function()
+			{
+				$("div.Subclass").hide();
+				$("div.Census").hide();
+				$("div.Driver").hide();
+				$("div.Reptile").hide();
+				$("div.Bird").hide();
+				$("div.Mammal").hide();
+				$(".Animal").hide();
+				$("div.Implementation").toggle();
+			});
+		});
+	</script>
+</html>
